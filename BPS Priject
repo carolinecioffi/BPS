@@ -1,0 +1,67 @@
+# run these 2 pip install commands if you don’t already have pandas for completejourney-py installed
+
+!pip install pandas
+
+!pip install completejourney-py
+
+ 
+
+# import packages
+
+import pandas as pd
+
+from completejourney_py import get_data
+
+ 
+
+# get transaction data
+
+transactions = get_data()[“transactions”]
+
+ 
+
+# get campaign description data
+
+Camp_desc = get_data()[“campaign_descriptions”]
+
+ 
+
+# get coupon data
+
+Coupon = get_data()[“coupons”]
+
+ 
+
+# get coupon redemptions data
+
+Coupon_red = get_data()[“coupon_redemptions”]
+
+ 
+
+# get products data
+
+Prod = get_data()[“products”]
+
+ 
+
+# get promotions data
+
+Promo = get_data()[“promotions”]
+
+ 
+
+# get campaign data
+
+Camp = get_data()[“campaigns”]
+
+ 
+
+# get demographic data
+
+Demo = get_data()[“demographics”]
+
+ 
+
+# example to write transaction data to CSV – students can do the same but for the other tables as well
+
+transactions.to_csv(“data/transaction_data.csv”, index=False)
